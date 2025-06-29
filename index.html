@@ -10,60 +10,168 @@
 </head>
 <body>
   <div id="particles-js"></div>
+
   <!-- Hero Section -->
   <section class="hero">
       <div class="hero-content fade">
           <img src="pfp.png" alt="Profile Picture" class="profile-pic" />
-          <div>
+          <div class="hero-text">
               <h1>Hello, I'm Matthew Sequeira</h1>
-              <p>Software Developer</p>
+              <p class="tagline">Software Developer & Minecraft Mod Creator</p>
+              <p class="description">Passionate about building innovative solutions and creating engaging experiences through code.</p>
+              <div class="hero-actions">
+                  <a href="#projects" class="hero-btn">View My Work</a>
+                  <a href="#contact" class="hero-btn secondary">Get In Touch</a>
+              </div>
           </div>
       </div>
   </section>
 
   <!-- Projects Section -->
-  <section class="projects fade">
+  <section id="projects" class="projects fade">
       <h2>Projects</h2>
+      
+      <!-- Project Filters -->
+      <div class="project-filters">
+        <button class="filter-btn active" data-filter="all">All Projects</button>
+        <button class="filter-btn" data-filter="web">Web Development</button>
+        <button class="filter-btn" data-filter="ai">AI</button>
+        <button class="filter-btn" data-filter="minecraft">Minecraft Mods</button>
+        <button class="filter-btn" data-filter="other">Other</button>
+      </div>
+      
       <div class="project-list">
-          <div class="project-card">
-              <div style="display: flex; flex-direction: column; align-items: flex-start; gap: 0;">
-                <h3 style="margin-bottom: 0;">Ping Mod</h3>
-                <span class="project-tags">
-                  <span class="project-tag">Minecraft</span>
-                  <span class="project-tag">Java</span>
-                </span>
-              </div>
-              <p>A lightweight Minecraft mod that lets you ping locations in-game, making teamwork a breeze.<br><span class="project-fact">Inspired by modern multiplayer games!</span></p>
-              <a href="https://www.curseforge.com/minecraft/mc-mods/ping-mod" class="project-link" target="_blank">View on CurseForge</a>
+
+        <div class="project-card" data-category="web">
+          <div class="project-status status-complete">Complete</div>
+          <div class="project-content">
+            <div style="display: flex; flex-direction: column; align-items: flex-start; gap: 0;">
+              <h3 style="margin-bottom: 0;">My Portfolio</h3>
+              <span class="project-tags">
+                <span class="project-tag">HTML</span>
+                <span class="project-tag">CSS</span>
+                <span class="project-tag">JavaScript</span>
+              </span>
+            </div>
+            <p>A personal website showcasing my projects, skills, and journey as a developer.<br><span class="project-fact">Built from scratch and always evolving!</span></p>
+            <a href="#" class="project-link">You're here!</a>
           </div>
-          <div class="project-card">
-              <div style="display: flex; flex-direction: column; align-items: flex-start; gap: 0;">
-                <h3 style="margin-bottom: 0;">Echoes of Time</h3>
-                <span class="project-tags">
-                  <span class="project-tag">Minecraft</span>
-                  <span class="project-tag">Java</span>
-                </span>
-              </div>
-              <p>A lore-rich Minecraft mod for 1.20+ introducing time-bending relics and new Ancient City mysteries.<br><span class="project-fact">Features a comprehensive time rewinding system!</span></p>
-              <a href="https://modrinth.com/mod/echoes-of-time" class="project-link" target="_blank">View on Modrinth</a>
+        </div>
+
+        <div class="project-card" data-category="minecraft">
+          <div class="project-status status-complete">Complete</div>
+          <div class="project-content">
+            <div style="display: flex; flex-direction: column; align-items: flex-start; gap: 0;">
+              <h3 style="margin-bottom: 0;">Ping Mod</h3>
+              <span class="project-tags">
+                <span class="project-tag">Minecraft</span>
+                <span class="project-tag">Java</span>
+              </span>
+            </div>
+            <p>A lightweight Minecraft mod that lets you ping locations in-game, making teamwork a breeze.<br><span class="project-fact">Inspired by modern multiplayer games!</span></p>
+            <a href="https://www.curseforge.com/minecraft/mc-mods/ping-mod" class="project-link" target="_blank">View on CurseForge</a>
           </div>
-          <div class="project-card">
-              <div style="display: flex; flex-direction: column; align-items: flex-start; gap: 0;">
-                <h3 style="margin-bottom: 0;">My Portfolio</h3>
-                <span class="project-tags">
-                  <span class="project-tag">HTML</span>
-                  <span class="project-tag">CSS</span>
-                  <span class="project-tag">JS</span>
-                </span>
-              </div>
-              <p>A personal website showcasing my projects, skills, and journey as a developer.<br><span class="project-fact">Built from scratch and always evolving!</span></p>
-              <a href="#" class="project-link">You're here!</a>
+        </div>
+
+        <div class="project-card" data-category="minecraft">
+          <div class="project-status status-complete">Complete</div>
+          <div class="project-content">
+            <div style="display: flex; flex-direction: column; align-items: flex-start; gap: 0;">
+              <h3 style="margin-bottom: 0;">Echoes of Time</h3>
+              <span class="project-tags">
+                <span class="project-tag">Minecraft</span>
+                <span class="project-tag">Java</span>
+              </span>
+            </div>
+            <p>A lore-rich Minecraft mod for 1.20+ introducing time-bending relics and new Ancient City mysteries.<br><span class="project-fact">Features a comprehensive time rewinding system!</span></p>
+            <a href="https://modrinth.com/mod/echoes-of-time" class="project-link" target="_blank">View on Modrinth</a>
           </div>
+        </div>
+
+        <div class="project-card" data-category="web">
+          <div class="project-status status-complete">Complete</div>
+          <div class="project-content">
+            <div style="display: flex; flex-direction: column; align-items: flex-start; gap: 0;">
+              <h3 style="margin-bottom: 0;">AI Chat Bookmarklet</h3>
+              <span class="project-tags">
+                <span class="project-tag">JavaScript</span>
+                <span class="project-tag">API</span>
+                <span class="project-tag">Bookmarklet</span>
+              </span>
+            </div>
+            <p>An AI chatbot bookmarklet using Hack Club's API that creates a unique personality every time it's launched.<br><span class="project-fact">Different AI personality each time you use it!</span></p>
+            <a href="https://github.com/mattseq/AI-Chat-Bookmarklet" class="project-link" target="_blank">View on GitHub</a>
+          </div>
+        </div>
+
+        <div class="project-card wip" data-category="minecraft">
+          <div class="project-status status-wip">WIP</div>
+          <div class="project-content">
+            <div style="display: flex; flex-direction: column; align-items: flex-start; gap: 0;">
+              <h3 style="margin-bottom: 0;">Speech Bubbles</h3>
+              <span class="project-tags">
+                <span class="project-tag">Minecraft</span>
+                <span class="project-tag">Java</span>
+                <span class="project-tag">Speech-to-Text</span>
+              </span>
+            </div>
+            <p>A Minecraft mod that adds speech bubbles. Uses Vosk Speech-to-Text models to translate real-time speech into text above the player.<br><span class="project-fact">Real-time voice-to-text in Minecraft!</span></p>
+            <span class="project-link" style="color: #ffc107;">Coming Soon</span>
+          </div>
+        </div>
+
+        <div class="project-card wip" data-category="minecraft">
+          <div class="project-status status-wip">WIP</div>
+          <div class="project-content">
+            <div style="display: flex; flex-direction: column; align-items: flex-start; gap: 0;">
+              <h3 style="margin-bottom: 0;">Inhabitants</h3>
+              <span class="project-tags">
+                <span class="project-tag">Minecraft</span>
+                <span class="project-tag">Java</span>
+                <span class="project-tag">Collaborative</span>
+              </span>
+            </div>
+            <p>A collaborative Minecraft mod that adds various new and unique creatures to the game, each with their own new game mechanics and behaviors.<br><span class="project-fact">Expanding Minecraft's ecosystem with unique creatures!</span></p>
+            <span class="project-link" style="color: #ffc107;">Coming Soon</span>
+          </div>
+        </div>
+
+        <div class="project-card concept" data-category="ai">
+          <div class="project-status status-concept">Concept</div>
+          <div class="project-content">
+            <div style="display: flex; flex-direction: column; align-items: flex-start; gap: 0;">
+              <h3 style="margin-bottom: 0;">Neural Network from Scratch</h3>
+              <span class="project-tags">
+                <span class="project-tag">Python</span>
+                <span class="project-tag">AI</span>
+                <span class="project-tag">Machine Learning</span>
+              </span>
+            </div>
+            <p>A complete implementation of neural networks from the ground up, including backpropagation, gradient descent, and various activation functions.<br><span class="project-fact">Building AI without external libraries!</span></p>
+            <span class="project-link" style="color: #8a2be2;">Concept Phase</span>
+          </div>
+        </div>
+
+        <div class="project-card concept" data-category="minecraft">
+          <div class="project-status status-concept">Concept</div>
+          <div class="project-content">
+            <div style="display: flex; flex-direction: column; align-items: flex-start; gap: 0;">
+              <h3 style="margin-bottom: 0;">Heartbeat</h3>
+              <span class="project-tags">
+                <span class="project-tag">Minecraft</span>
+                <span class="project-tag">Java</span>
+              </span>
+            </div>
+            <p>A mod that adds immersive effects seamlessly into Minecraft. Effects include: screenshake, heavy breathing, screen pulse, trembling, and of course, a heartbeat.<br><span class="project-fact">Making Minecraft more immersive!</span></p>
+            <span class="project-link" style="color: #8a2be2;">Concept Phase</span>
+          </div>
+        </div>
+
       </div>
   </section>
 
   <!-- Contact Section -->
-  <section class="contact fade">
+  <section id="contact" class="contact fade">
       <h2>Contact Me</h2>
       <p>Email: <a href="mailto:matthewsequeir@example.com">matthewsequeir@gmail.com</a></p>
       <p>GitHub: <a href="https://github.com/mattseq" target="_blank">github.com/mattseq</a></p>

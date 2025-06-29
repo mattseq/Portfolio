@@ -36,3 +36,43 @@ particlesJS('particles-js', {
     }
   }
 });
+
+// Wait for DOM to be fully loaded
+document.addEventListener('DOMContentLoaded', function() {
+  // Project filtering functionality
+  function filterProjects(category, buttonElement) {
+    console.log('Filtering projects by:', category); // Debug log
+    const projects = document.querySelectorAll('.project-card');
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    
+    console.log('Found projects:', projects.length); // Debug log
+    
+    // Update active filter button
+    filterBtns.forEach(btn => btn.classList.remove('active'));
+    buttonElement.classList.add('active');
+    
+    // Filter projects
+    projects.forEach(project => {
+      const projectCategory = project.dataset.category;
+      console.log('Project category:', projectCategory); // Debug log
+      
+      if (category === 'all' || projectCategory === category) {
+        project.style.display = 'block';
+        project.style.animation = 'fadeInUp 0.6s ease-out';
+      } else {
+        project.style.display = 'none';
+      }
+    });
+  }
+
+  // Add filter button event listeners
+  const filterBtns = document.querySelectorAll('.filter-btn');
+  console.log('Found filter buttons:', filterBtns.length); // Debug log
+  
+  filterBtns.forEach(btn => {
+    btn.addEventListener('click', function() {
+      console.log('Filter button clicked:', this.dataset.filter); // Debug log
+      filterProjects(this.dataset.filter, this);
+    });
+  });
+});
